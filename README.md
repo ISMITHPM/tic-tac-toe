@@ -43,3 +43,7 @@ zip -r tic-tac-toe.zip manifest.json popup.html popup.css popup.js game.js icons
 | `popup.html`, `popup.css`, `popup.js` | The popup UI |
 | `game.js` | Game rules, computer players and score maths |
 | `fonts/` | Poppins (Latin subset), licensed under the SIL Open Font License |
+
+## Licence
+
+The code is released under the [MIT License](LICENSE). The bundled Poppins font files in `fonts/` are covered by their own licence, the SIL Open Font License (see `fonts/OFL.txt`).
