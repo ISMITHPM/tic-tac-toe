@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Pencil Tic-Tac-Toe",
+  "version": "0.0.3",
+  "description": "Play tic-tac-toe from your toolbar on 3x3, 5x5 or 7x7 grids, with replays, score history and themes.",
+  "permissions": ["storage"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Play tic-tac-toe",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="classic" data-font="standard">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tic-Tac-Toe</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <nav class="tabs" role="tablist" aria-label="Sections">
+    <button type="button" role="tab" id="tab-play" data-tab="play" aria-controls="panel-play" aria-selected="true">Play</button>
+    <button type="button" role="tab" id="tab-history" data-tab="history" aria-controls="panel-history" aria-selected="false" tabindex="-1">History</button>
+    <button type="button" role="tab" id="tab-options" data-tab="options" aria-controls="panel-options" aria-selected="false" tabindex="-1">Options</button>
+  </nav>
+
+  <!-- PLAY -->
+  <section id="panel-play" class="panel" role="tabpanel" aria-labelledby="tab-play">
+    <button type="button" id="caption" class="caption" title="Change options"></button>
+    <p id="goal" class="goal"></p>
+    <p id="status" role="status" aria-live="polite"></p>
+    <div id="board" role="group" aria-label="Tic-tac-toe board"></div>
+    <section id="tally" class="tally" aria-label="Recent results on these settings"></section>
+    <div class="actions">
+      <button type="button" id="new-game">New game</button>
+      <button type="button" id="replay">Replay last game</button>
+    </div>
+  </section>
+
+  <!-- HISTORY -->
+  <section id="panel-history" class="panel" role="tabpanel" aria-labelledby="tab-history" hidden>
+    <div id="history-matrix" class="matrix" role="group" aria-label="Results by opponent and grid size"></div>
+    <h2 id="history-title" class="stats-title"></h2>
+    <div id="history-stats" class="stats-wrap"></div>
+    <div id="history-recent" class="recent" aria-label="Most recent games, newest first"></div>
+    <p class="hint">Pick a row, column or square to filter. Won and Lost are from X’s side (you, against the computer). The last 20 games per opponent and grid size are kept.</p>
+    <div class="actions">
+      <button type="button" id="clear-scores" class="danger">Clear all scores</button>
+    </div>
+  </section>
+
+  <!-- OPTIONS -->
+  <section id="panel-options" class="panel" role="tabpanel" aria-labelledby="tab-options" hidden>
+    <div id="options-groups"></div>
+    <p id="win-hint" class="hint"></p>
+    <h2 class="stats-title">Last 20 games on these settings</h2>
+    <div id="options-stats" class="stats-wrap"></div>
+    <p class="hint">Options save as soon as you change them. Changing the opponent or grid size starts a new game.</p>
+  </section>
+
+  <script src="game.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
